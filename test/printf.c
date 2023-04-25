@@ -1,18 +1,17 @@
-#include <stdarg.h>
 #include "main.h"
 
 /**
- * print - The function to parse and print out all arg int the standar output.
+ * print - This is the function in charge of parsing and printing out all arg int the standar input output.
  * @format: A string containing all specifiers.
  * @conv_list: A list of converter functions ( specifiers ).
  * @arg_list: A list containing all the argumentents passed to the program.
  *
  * Return: A total count of the characters printed.
  */
-
 int print(const char *format, conv_type conv_list[], va_list arg_list)
 {
 	int i, j, nb_chars, chars;
+
 	chars = 0;
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -52,15 +51,15 @@ int print(const char *format, conv_type conv_list[], va_list arg_list)
 }
 
 /**
- * _printf - The function to be executed for printing
- * @format: The argument in String format that contains the caracters to print and conversion specifiers
+ * _printf - The function to print to the console
+ * @format: A string containing all the desired characters to print
+ * and conversion specifiers
  *
  * Return: The length of the string to print
  */
-
 int _printf(const char *format, ...)
 {
-	int caracter_count;
+	int nb_chars;
 	conv_type conv_list[] = {
 		{"c", print_character},
 		{"s", print_string},
@@ -68,8 +67,8 @@ int _printf(const char *format, ...)
 		{"i", print_integer},
 		{"b", print_binary},
 		{"r", print_reverse_string},
-		{"R", rot13},
-		{"u", print_uns},
+		{"R", rotter},
+		{"u", print_unsigned},
 		{"o", print_octal},
 		{"x", print_hex_lower},
 		{"X", print_hex_upper},
@@ -84,10 +83,9 @@ int _printf(const char *format, ...)
 
 	va_start(arg_list, format);
 
-	caracter_count = print(format, conv_list, arg_list);
+	nb_chars = print(format, conv_list, arg_list);
 
 	va_end(arg_list);
 
-	return (caracter_cout);
-	return 0;
+	return (nb_chars);
 }
