@@ -164,11 +164,11 @@ int print_hexadecimal_upper(va_list list)
 
 	num = va_arg(list, unsigned int);
 	if (num == 0)
-		return (_putchar('0'));
+		return (put_character('0'));
 	if (num < 1)
 		return (-1);
 
-	len = num_len(num, 16);
+	len = number_len(num, 16);
 	hex_rep = malloc(sizeof(char) * len + 1);
 	if (hex_rep == NULL)
 		return (-1);

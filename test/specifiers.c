@@ -17,7 +17,7 @@ int print_unsigned(va_list list)
 
 	if (n < 1)
 		return (-1);
-	return (print_uns_number(n));
+	return (print_unsigned_number(n));
 }
 
 /**
@@ -48,7 +48,7 @@ int print_string(va_list list)
 		str = "(null)";
 
 	for (i = 0; str[i] != '\0'; i++)
-		_putchar(str[i]);
+		put_character(str[i]);
 
 	return (i);
 }
@@ -76,7 +76,7 @@ int print_integer(va_list list)
  */
 int print_character(va_list list)
 {
-	_putchar(va_arg(list, int));
+	put_character(va_arg(list, int));
 
 	return (1);
 }

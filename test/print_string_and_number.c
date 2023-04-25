@@ -56,12 +56,12 @@ int rotter(va_list list)
 		{
 			if (str[i] == from[j])
 			{
-				_putchar(to[j]);
+				put_character(to[j]);
 				break;
 			}
 		}
 		if (j == 53)
-			_putchar(str[i]);
+			put_character(str[i]);
 	}
 	return (i);
 }
@@ -85,7 +85,7 @@ int print_digit_number(va_list args)
 
 	if (n < 0)
 	{
-		len += _putchar('-');
+		len += put_character('-');
 		num = n * -1;
 	}
 	else
@@ -96,7 +96,7 @@ int print_digit_number(va_list args)
 
 	while (div != 0)
 	{
-		len += _putchar('0' + num / div);
+		len += put_character('0' + num / div);
 		num %= div;
 		div /= 10;
 	}
@@ -127,7 +127,7 @@ int print_unsigned_number(unsigned int n)
 
 	while (div != 0)
 	{
-		len += _putchar('0' + num / div);
+		len += put_character('0' + num / div);
 		num %= div;
 		div /= 10;
 	}
