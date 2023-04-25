@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
+ * put_character - writes the character c to stdout
  * @c: The character to print
  *
  * Return: On success 1 otherwise -1
@@ -77,7 +77,7 @@ void write_str(char *str)
 }
 
 /**
- * num_len - Calculates the length for a number
+ * number_len - Calculates the length for a number
  * @num: The number for which the length is being calculated
  * @base: Base to be calculated by
  *

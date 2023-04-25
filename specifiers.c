@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_uns - Prints Unsigned integers
+ * print_unsigned - Prints Unsigned integers
  * @list: List of all of the argumets
  *
  * Return: The amount of digits printed
@@ -21,7 +21,7 @@ int print_unsigned(va_list list)
 }
 
 /**
- * print_percent - Prints a percent symbol
+ * print_percentage - Prints a percent symbol
  * @list: list of arguments
  * Return: Will return the amount of characters printed.
  */
@@ -32,7 +32,7 @@ int print_percentage(__attribute__((unused))va_list list)
 }
 
 /**
- * print_str - Prints a string
+ * print_string - Prints a string
  * @list: list of arguments
  *
  * Return: The amount of characters printed.
@@ -54,22 +54,22 @@ int print_string(va_list list)
 }
 
 /**
- * print_int - Prints an integer
+ * print_integer - Prints an integer
  * @list: list of arguments
  *
  * Return: The amount of digits printed.
  */
 int print_integer(va_list list)
 {
-        int len;
+	int len;
 
-        len = print_digit_number(list);
+	len = print_digit_number(list);
 
-        return (len);
+	return (len);
 }
 
 /**
- * print_char - Prints character
+ * print_character - Prints character
  * @list: list of arguments
  *
  * Return: Always 1

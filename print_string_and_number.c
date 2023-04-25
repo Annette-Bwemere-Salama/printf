@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rev_str - Calls a function to reverse and print a string
+ * print_reverse_string - Calls a function to reverse and print a string
  * @arg: Argument passed to the function
  *
  * Return: The amount of characters printed
@@ -106,7 +106,7 @@ int print_digit_number(va_list args)
 }
 
 /**
- * print_uns_number - Prints an unsigned number
+ * print_unsigned_number - Prints an unsigned number
  * @n: unsigned integer to be printed
  *
  * Return: The amount of digits printed

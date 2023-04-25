@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print - This is the function in charge of parsing and printing out all arg int the standar input output.
+ * print - This is the function in charge of parsing and printing out all arg
+ * int the standar input output.
  * @format: A string containing all specifiers.
  * @conv_list: A list of converter functions ( specifiers ).
  * @arg_list: A list containing all the argumentents passed to the program.

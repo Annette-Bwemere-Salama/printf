@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * hex_checker - Checks which hex function is gonna be called
+ * hexadecimal_checker - Checks which hex function is gonna be called
  * @num: Number to convert into letter
  * @x: Tells which hex function is calling
  *
@@ -20,7 +20,7 @@ int hexadecimal_checker(int num, char x)
 }
 
 /**
- * print_binary - Converts a number from base 10 to binary
+ * print_bin - Converts a number from base 10 to binary
  * @list: List of arguments passed to this function
  *
  * Return: The length of the digit printed
@@ -61,7 +61,8 @@ int print_bin(va_list list)
 }
 
 /**
- * print_octal - Prints the numeric representation of a number in octal base
+ * print_octal_number - Prints the numeric representation of a number
+ * in octal base
  * @list: List of all the arguments passed to the program
  *
  * Return: Number of digits printed to stdout
@@ -74,11 +75,14 @@ int print_octal_number(va_list list)
 	char *rev;
 
 	num = va_arg(list, unsigned int);
+
 	if (num == 0)
 		return (put_character('0'));
 	if (num < 1)
 		return (-1);
+
 	len = number_len(num, 8);
+
 	oct_rep = malloc(sizeof(char) * len + 1);
 	if (oct_rep == NULL)
 		return (-1);
@@ -98,7 +102,8 @@ int print_octal_number(va_list list)
 }
 
 /**
- * print_hex_lower - Prints a representation of a dec number on hex lowercase
+ * print_hexadecimal_lower - Prints a representation of a dec number on hex
+ * lowercase
  * @list: List of the arguments passed to the function
  *
  * Return: Number of characters printed
@@ -149,7 +154,8 @@ int print_hexadecimal_lower(va_list list)
 
 
 /**
- * print_hex_upper - Prints a representation of a dec number on hex uppercase
+ * print_hexadecimal_upper - Prints a representation of a dec number on hex
+ * uppercase
  * @list: List of the arguments passed to the function
  *
  * Return: Number of characters printed
