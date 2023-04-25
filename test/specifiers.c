@@ -13,7 +13,7 @@ int print_unsigned(va_list list)
 	n = va_arg(list, unsigned int);
 
 	if (n == 0)
-		return (print_uns_number(n));
+		return (print_unsigned_number(n));
 
 	if (n < 1)
 		return (-1);
@@ -27,7 +27,7 @@ int print_unsigned(va_list list)
  */
 int print_percentage(__attribute__((unused))va_list list)
 {
-	_putchar('%');
+	put_character('%');
 	return (1);
 }
 
@@ -63,7 +63,7 @@ int print_integer(va_list list)
 {
         int len;
 
-        len = print_number(list);
+        len = print_digit_number(list);
 
         return (len);
 }

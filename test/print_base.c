@@ -34,11 +34,11 @@ int print_bin(va_list list)
 
 	num = va_arg(list, unsigned int);
 	if (num == 0)
-		return (_putchar('0'));
+		return (put_character('0'));
 	if (num < 1)
 		return (-1);
 
-	len = num_len(num, 2);
+	len = number_len(num, 2);
 	str = malloc(sizeof(char) * len + 1);
 	if (str == NULL)
 		return (-1);
@@ -75,10 +75,10 @@ int print_octal_number(va_list list)
 
 	num = va_arg(list, unsigned int);
 	if (num == 0)
-		return (_putchar('0'));
+		return (put_character('0'));
 	if (num < 1)
 		return (-1);
-	len = num_len(num, 8);
+	len = number_len(num, 8);
 	oct_rep = malloc(sizeof(char) * len + 1);
 	if (oct_rep == NULL)
 		return (-1);
@@ -113,11 +113,11 @@ int print_hexadecimal_lower(va_list list)
 
 	num = va_arg(list, unsigned int);
 	if (num == 0)
-		return (_putchar('0'));
+		return (put_character('0'));
 	if (num < 1)
 		return (-1);
 
-	len = num_len(num, 16);
+	len = number_len(num, 16);
 	hex_rep = malloc(sizeof(char) * len + 1);
 	if (hex_rep == NULL)
 		return (-1);
@@ -127,7 +127,7 @@ int print_hexadecimal_lower(va_list list)
 		rmdr = num % 16;
 		if (rmdr > 9)
 		{
-			rmdr = hex_checker(rmdr, 'x');
+			rmdr = hexadecimal_checker(rmdr, 'x');
 			hex_rep[len] = rmdr;
 		}
 		else
@@ -178,7 +178,7 @@ int print_hexadecimal_upper(va_list list)
 		rmdr = num % 16;
 		if (rmdr > 9)
 		{
-			rmdr = hex_checker(rmdr, 'X');
+			rmdr = hexadecimal_checker(rmdr, 'X');
 			hex_rep[len] = rmdr;
 		}
 		else

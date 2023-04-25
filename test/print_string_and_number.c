@@ -24,7 +24,7 @@ int print_reverse_string(va_list arg)
 		return (-1);
 
 	for (len = 0; ptr[len] != '\0'; len++)
-		_putchar(ptr[len]);
+		put_character(ptr[len]);
 
 	free(ptr);
 

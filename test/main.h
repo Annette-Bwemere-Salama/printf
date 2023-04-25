@@ -18,11 +18,11 @@ typedef struct converter
 	int (*func)(va_list);
 } conv_type;
 
-int _putchar(char c);
+int put_character(char c);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *rev_str(char *s);
 void write_str(char *str);
-unsigned int num_len(unsigned int num, int base);
+unsigned int number_len(unsigned int num, int base);
 int print_reverse_string(va_list arg);
 int rotter(va_list list);
 int print_digit_number(va_list args);

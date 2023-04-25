@@ -10,7 +10,7 @@
  */
 int print(const char *format, conv_type conv_list[], va_list arg_list)
 {
-	int i, j, nb_chars, chars;
+	int i, j, char_count, chars;
 
 	chars = 0;
 	for (i = 0; format[i] != '\0'; i++)
@@ -21,10 +21,10 @@ int print(const char *format, conv_type conv_list[], va_list arg_list)
 			{
 				if (format[i + 1] == conv_list[j].spec[0])
 				{
-					nb_chars = conv_list[j].func(arg_list);
-					if (nb_chars == -1)
+					char_count = conv_list[j].func(arg_list);
+					if (char_count == -1)
 						return (-1);
-					chars += nb_chars;
+					chars += char_count;
 					break;
 				}
 			}
@@ -32,8 +32,8 @@ int print(const char *format, conv_type conv_list[], va_list arg_list)
 			{
 				if (format[i + 1] != '\0')
 				{
-				_putchar(format[i]);
-				_putchar(format[i + 1]);
+				put_character(format[i]);
+				put_character(format[i + 1]);
 				chars += 2;
 				}
 				else
@@ -43,7 +43,7 @@ int print(const char *format, conv_type conv_list[], va_list arg_list)
 		}
 		else
 		{
-			_putchar(format[i]);
+			put_character(format[i]);
 			chars++;
 		}
 	}
@@ -59,20 +59,20 @@ int print(const char *format, conv_type conv_list[], va_list arg_list)
  */
 int _printf(const char *format, ...)
 {
-	int nb_chars;
+	int char_count;
 	conv_type conv_list[] = {
 		{"c", print_character},
 		{"s", print_string},
 		{"d", print_integer},
 		{"i", print_integer},
-		{"b", print_binary},
+		{"b", print_bin},
 		{"r", print_reverse_string},
 		{"R", rotter},
 		{"u", print_unsigned},
-		{"o", print_octal},
-		{"x", print_hex_lower},
-		{"X", print_hex_upper},
-		{"%", print_percent},
+		{"o", print_octal_number},
+		{"x", print_hexadecimal_lower},
+		{"X", print_hexadecimal_upper},
+		{"%", print_percentage},
 		{NULL, NULL}
 	};
 
@@ -83,9 +83,9 @@ int _printf(const char *format, ...)
 
 	va_start(arg_list, format);
 
-	nb_chars = print(format, conv_list, arg_list);
+	char_count  = print(format, conv_list, arg_list);
 
 	va_end(arg_list);
 
-	return (nb_chars);
+	return (char_count);
 }
