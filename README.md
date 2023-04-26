@@ -94,3 +94,14 @@ You could write additional test cases to test other aspects of your `printf` imp
 
 Betty Style
 * [Dropwizard](https://github.com/holbertonschool/Betty) - Betty Style
+
+
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/JoeMakuta/printf) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](https://github.com/JoeMakuta/printf) for versioning. For the versions available, see the [tags on this repository](https://github.com/JoeMakuta/printf). 
+
