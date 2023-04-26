@@ -47,3 +47,44 @@ int main(void) {
 
 In this example, we include the `stdio.h` header file and use the `printf` function to output a string to the standard output stream. When this program is compiled and run, it will print the string `"Hello, world!"` followed by a newline character.
 
+
+
+
+## Running the tests
+
+To run tests for a `printf` implementation, you would typically write test cases that call your `printf` function with various inputs and check that the output is correct. Here's an example of how you might write a simple test case for a `printf` implementation:
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char buffer[100];
+    int result;
+
+    // Redirect stdout to buffer
+    freopen("/dev/null", "a", stdout);
+    setbuf(stdout, buffer);
+
+    // Call printf with test input
+    result = printf("Hello, %s!\n", "world");
+
+    // Check the result
+    if (result != 13) {
+        printf("Test failed: incorrect return value\n");
+        return 1;
+    }
+
+    if (strcmp(buffer, "Hello, world!\n") != 0) {
+        printf("Test failed: incorrect output\n");
+        return 1;
+    }
+
+    printf("Test passed\n");
+    return 0;
+}
+```
+
+In this example, we redirect the standard output stream to a buffer so that we can capture the output of the `printf` function. We then call `printf` with a test input and check that the return value and the output are correct. If either the return value or the output is incorrect, we print an error message and return a non-zero exit code to indicate that the test failed.
+
+You could write additional test cases to test other aspects of your `printf` implementation, such as its handling of different format specifiers and its behavior when called with invalid inputs.
