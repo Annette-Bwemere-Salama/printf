@@ -105,3 +105,17 @@ Please read [CONTRIBUTING.md](https://github.com/JoeMakuta/printf) for details o
 
 We use [SemVer](https://github.com/JoeMakuta/printf) for versioning. For the versions available, see the [tags on this repository](https://github.com/JoeMakuta/printf). 
 
+
+
+## Authors
+
+* **JoeMakuta** - *Initial work* - [PurpleBooth](https://github.com/JoeMakuta)
+* **Annette-Bwemere-Salama** - *COntributor* - [PurpleBooth](https://github.com/Annette-Bwemere-Salama)
+
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+
