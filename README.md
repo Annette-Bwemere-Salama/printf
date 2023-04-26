@@ -88,3 +88,9 @@ int main(void) {
 In this example, we redirect the standard output stream to a buffer so that we can capture the output of the `printf` function. We then call `printf` with a test input and check that the return value and the output are correct. If either the return value or the output is incorrect, we print an error message and return a non-zero exit code to indicate that the test failed.
 
 You could write additional test cases to test other aspects of your `printf` implementation, such as its handling of different format specifiers and its behavior when called with invalid inputs.
+
+
+### And coding style tests
+
+Betty Style
+* [Dropwizard](https://github.com/holbertonschool/Betty) - Betty Style
