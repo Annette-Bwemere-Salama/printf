@@ -22,3 +22,28 @@ In this example, the format string `"x = %d, y = %f\n"` contains two format spec
 ```
 x = 10, y = 3.140000
 ```
+
+
+
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+<!-- ### Prerequisites -->
+
+To use the `printf` function in the C programming language, you need to have a basic understanding of the C language and its syntax. You also need to have a C compiler installed on your computer so that you can compile and run C programs.
+
+In your C code, you need to include the `stdio.h` header file, which contains the declaration of the `printf` function. Here's an example of how you might use `printf` in a simple C program:
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    printf("Hello, world!\n");
+    return 0;
+}
+```
+
+In this example, we include the `stdio.h` header file and use the `printf` function to output a string to the standard output stream. When this program is compiled and run, it will print the string `"Hello, world!"` followed by a newline character.
+
