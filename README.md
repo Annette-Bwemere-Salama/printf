@@ -1,6 +1,6 @@
 # Printf
 
-`printf` is an implementation of the printf function in C.
+`printf` is an implementation of the printf F in C.
 
 `printf` is a function in the C programming language that is used to output formatted text to the standard output stream (usually the screen). The name `printf` stands for "print formatted" and it takes a format string as its first argument, followed by any number of additional arguments. The format string contains placeholders, called format specifiers, that are replaced by the values of the additional arguments when the function is called.
 
