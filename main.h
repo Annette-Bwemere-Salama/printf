@@ -63,4 +63,7 @@ int print_string(va_list list);
 
 int print_character(va_list list);
 
+int print_string_non_printable(va_list arg_list);
+
+
 #endif

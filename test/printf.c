@@ -73,6 +73,7 @@ int _printf(const char *format, ...)
 		{"x", print_hexadecimal_lower},
 		{"X", print_hexadecimal_upper},
 		{"%", print_percentage},
+		{"S", print_string_non_printable},
 		{NULL, NULL}
 	};
 

@@ -134,3 +134,35 @@ int print_unsigned_number(unsigned int n)
 
 	return (len);
 }
+
+
+
+/**
+ * print_string_non_printable - Prints an unsigned number
+ * @n: unsigned integer to be printed
+ *
+ * Return: The amount of digits printed
+ */
+
+int print_string_non_printable(va_list arg_list)
+{
+    char *str = va_arg(arg_list, char *);
+    int i, chars = 0;
+
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] > 0 && str[i] < 32 || str[i] >= 127)
+        {
+            chars += put_character('\\');
+            chars += put_character('x');
+            chars += put_character("0123456789ABCDEF"[(str[i] >> 4) & 0xF]);
+            chars += put_character("0123456789ABCDEF"[str[i] & 0xF]);
+        }
+        else
+        {
+            chars += put_character(str[i]);
+        }
+    }
+
+    return (chars);
+}
